@@ -29,7 +29,7 @@
   [self.viewController presentViewController:vc animated:YES completion:nil];
 
   callbackId = command.callbackId;
-  [pluginResult setKeepCallback:@YES];
+  [pluginResult setKeepCallback:[NSNumber numberWithBool:YES]];
 
   [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
